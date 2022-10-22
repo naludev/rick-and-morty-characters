@@ -1,0 +1,28 @@
+.pagination {
+  color: white;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 25px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font-weight: 200;
+  color: white;
+}
+
+.btn btn-primary fs-5 prev {
+  margin: 10px;
+}
+
+.active {
+  color: violet;
+}
+
+.btn btn-primary fs-5 next {
+  margin: 10px;
+}
+
+.page-link {
+  margin: 10px;
+}
