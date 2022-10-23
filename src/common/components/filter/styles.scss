@@ -69,3 +69,11 @@
   margin-top: -1.3rem;
   margin-left: 10rem;
 }
+
+
+@media only screen and (max-width: 320px) {
+  .filterContent {
+    display: flex;
+    flex-direction: column;
+  }
+}

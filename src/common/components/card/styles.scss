@@ -98,3 +98,9 @@
   background-color: transparent;
   cursor: pointer;
 }
+
+@media only screen and (max-width: 320px) {
+  .card {
+    padding: 0rem;
+  }
+}
