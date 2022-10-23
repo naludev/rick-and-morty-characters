@@ -3,7 +3,7 @@ import { status, gender } from "./helper";
 import Search from "./search";
 import "./styles.scss";
 
-const Filter = ({ query, handleChange, handleSubmit, pageNumber, updatePageNumber, updateStatus, updateGender, updateSpecies,
+const Filter = ({ searchQuery, handleChange, handleSubmit, pageNumber, updatePageNumber, updateStatus, updateGender, updateSpecies,
 }) => {
   let clear = () => { updateStatus(""); updateGender(""); updateSpecies(""); updatePageNumber(1); window.location.reload(false) };
 
@@ -26,7 +26,7 @@ const Filter = ({ query, handleChange, handleSubmit, pageNumber, updatePageNumbe
             </div>
           )}
         </div>
-        <div style={{ marginLeft: "3rem" }}>
+        <div>
           <button className="filterBy" onClick={() => setShowGender(!showGender)}>gender</button>
           {showGender && (
             <div>
@@ -39,7 +39,7 @@ const Filter = ({ query, handleChange, handleSubmit, pageNumber, updatePageNumbe
           )}
         </div>
         <div>
-          <Search handleChange={handleChange} handleSubmit={handleSubmit} searchQuery={query} />
+          <Search handleChange={handleChange} handleSubmit={handleSubmit} searchQuery={searchQuery} />
         </div>
       </div>
     </div>

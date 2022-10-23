@@ -29,19 +29,3 @@ export const useDetails = ({ id }) => {
 
   return { name, location, origin, gender, image, status, species };
 };
-
-export const useGetByName = ({ query, page }) => {
-  let [fetchedData, updateFetchedData] = useState([]);
-  let { info, results } = fetchedData;
-
-  const api = `https://rickandmortyapi.com/api/character/?name=${query}&page=${page}`;
-
-  useEffect(() => {
-    (async function () {
-      let data = await fetch(api).then((resp) => resp.json());
-      updateFetchedData(data);
-    })();
-  }, [api]);
-
-  return { results, info };
-};

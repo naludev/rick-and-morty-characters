@@ -13,24 +13,59 @@ const Home = () => {
   const [gender, updateGender] = useState("");
   const [species, updateSpecies] = useState("");
   const [search, setSearch] = useState("");
+  const [searchQuery, setSearchQuery] = useState("");
 
-  const { info, results } = useCharacters({ page: pageNumber, search: search, status: status, gender: gender, species: species });
+  const { info, results } = useCharacters({
+    page: pageNumber,
+    search: searchQuery,
+    status: status,
+    gender: gender,
+    species: species,
+  });
+
+  const handleChange = (e) => {
+    setSearchQuery(e.target.value);
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+
 
   return (
     <div className="homeContainer">
       <BackgroundParticles />
       <img className="icon" src={Logo} alt="" />
-      <Filter pageNumber={pageNumber} status={status} updateStatus={updateStatus} updateGender={updateGender} updateSpecies={updateSpecies} updatePageNumber={updatePageNumber} />
+      <Filter
+        searchQuery={searchQuery}
+        handleChange={handleChange}
+        handleSubmit={handleSubmit}
+        pageNumber={pageNumber}
+        status={status}
+        updateStatus={updateStatus}
+        updateGender={updateGender}
+        updateSpecies={updateSpecies}
+        updatePageNumber={updatePageNumber}
+      />
       <div className="cards">
         {results ? (
           results.map((i) => (
-            <Card key={i.id} id={i.id} image={i.image} name={i.name} status={i.status} />
+            <Card
+              key={i.id}
+              id={i.id}
+              image={i.image}
+              name={i.name}
+              status={i.status}
+            />
           ))
         ) : (
-          <p>not found</p>
+          <p>not found results</p>
         )}
       </div>
-      <Pagination info={info} pageNumber={pageNumber} updatePageNumber={updatePageNumber} />
+      <Pagination
+        info={info}
+        pageNumber={pageNumber}
+        updatePageNumber={updatePageNumber}
+      />
     </div>
   );
 };
