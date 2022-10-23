@@ -1,3 +1,5 @@
+@import "../../../app/globals/colors.scss";
+
 .card {
   position: relative;
   text-align: center;
@@ -9,14 +11,14 @@
   align-items: center;
   place-content: space-between;
   cursor: pointer;
-  color: white;
+  color: $white;
   margin: 2rem;
   padding: 1rem;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
 .card:hover {
-  color: black;
+  color: $black;
   align-self: center;
   align-items: center;
   align-content: center;
@@ -24,7 +26,7 @@
 
 .characterImage {
   width: 90%;
-  background-color: black;
+  background-color: $black;
 }
 
 .name {
@@ -45,24 +47,24 @@
   font-size: 12px;
   padding: 3px;
   border-radius: 4px;
-  color: #98f6ff;
-  border: 2px solid #98f6ff;
+  color: $blue;
+  border: 2px solid $blue;
 }
 
 .badgeAlive {
   font-size: 12px;
   padding: 3px;
   border-radius: 4px;
-  color: #cdff87;
-  border: 2px solid #cdff87;
+  color: $green;
+  border: 2px solid $green;
 }
 
 .badgeDead {
   font-size: 12px;
   padding: 3px;
   border-radius: 4px;
-  color: #ff8c9b;
-  border: 2px solid #ff8c9b;
+  color: $pink;
+  border: 2px solid $pink;
 }
 
 .content {
@@ -74,7 +76,7 @@
   padding: 1rem;
   margin-top: -2rem;
   border-radius: 6px;
-  background-color: black;
+  background-color: $black;
 }
 
 .headerContainer {
@@ -91,8 +93,8 @@
   padding: 3px;
   border-radius: 4px;
   font-weight: 200;
-  color: white;
-  border: 2px solid white;
+  color: $white;
+  border: 2px solid $white;
   background-color: transparent;
   cursor: pointer;
 }

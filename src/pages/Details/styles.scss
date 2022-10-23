@@ -1,9 +1,11 @@
+@import "../../app//globals/colors.scss";
+
 .characterName {
   font-size: 15px;
   letter-spacing: 5px;
   text-transform: uppercase;
   font-weight: 200;
-  color: white;
+  color: $white;
   background-color: transparent;
 }
 
@@ -12,7 +14,7 @@
   letter-spacing: 5px;
   text-transform: uppercase;
   font-weight: 200;
-  color: white;
+  color: $white;
   background-color: transparent;
 }
 

@@ -1,3 +1,5 @@
+@import "../../../app/globals/colors.scss";
+
 .filterContainer {
   display: flex;
   flex-direction: column;
@@ -11,8 +13,8 @@
   font-size: 12px;
   padding: 3px;
   border-radius: 4px;
-  color: violet;
-  border: 2px solid violet;
+  color: $pink;
+  border: 2px solid $pink;
   background-color: transparent;
   cursor: pointer;
 }
@@ -24,8 +26,8 @@
   font-size: 8px;
   padding: 3px;
   border-radius: 4px;
-  color: white;
-  border: 2px solid white;
+  color: $white;
+  border: 2px solid $white;
   background-color: transparent;
   cursor: pointer;
 }
@@ -37,8 +39,8 @@
   font-size: 8px;
   padding: 3px;
   border-radius: 4px;
-  color: white;
-  border: 2px solid white;
+  color: $white;
+  border: 2px solid $white;
   background-color: transparent;
   cursor: pointer;
 }
@@ -58,8 +60,8 @@
   padding: 3px;
   width: 200px;
   border-radius: 4px;
-  color: white;
-  border: 2px solid white;
+  color: $white;
+  border: 2px solid $white;
   background-color: transparent;
 }
 

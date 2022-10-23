@@ -1,5 +1,7 @@
+@import "../../../app/globals/colors.scss";
+
 .pagination {
-  color: white;
+  color: $white;
   list-style: none;
   display: flex;
   justify-content: center;
@@ -8,7 +10,7 @@
   letter-spacing: 5px;
   text-transform: uppercase;
   font-weight: 200;
-  color: white;
+  color: $white;
 }
 
 .btn btn-primary fs-5 prev {
@@ -16,7 +18,7 @@
 }
 
 .active {
-  color: violet;
+  color: $pink;
 }
 
 .btn btn-primary fs-5 next {
