@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/broken-rubik-prueba-tecnica/static/css/main.7166927f.css",
+    "main.js": "/broken-rubik-prueba-tecnica/static/js/main.ac3c36d1.js",
+    "static/media/logo.png": "/broken-rubik-prueba-tecnica/static/media/logo.bc888395abba8c2eb07e.png",
+    "index.html": "/broken-rubik-prueba-tecnica/index.html",
+    "main.7166927f.css.map": "/broken-rubik-prueba-tecnica/static/css/main.7166927f.css.map",
+    "main.ac3c36d1.js.map": "/broken-rubik-prueba-tecnica/static/js/main.ac3c36d1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7166927f.css",
+    "static/js/main.ac3c36d1.js"
+  ]
+}
