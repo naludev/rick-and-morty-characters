@@ -3,7 +3,7 @@ import { Routes, Route, BrowserRouter } from "react-router-dom";
 import { routes } from "./routesConfig";
 import Component from "./Component";
 
-export const App = () => (
+export const Main = () => (
   <BrowserRouter>
     <Routes>
       {routes.map(({ name, path, component }) => (
@@ -17,4 +17,4 @@ export const App = () => (
   </BrowserRouter>
 );
 
-export default App;
+export default Main;
