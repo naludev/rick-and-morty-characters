@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./styles.scss";
 import Logo from "../../assets/logo.png";
 import { useCharacters } from "../../app/api";
@@ -12,7 +12,6 @@ const Home = () => {
   const [status, updateStatus] = useState("");
   const [gender, updateGender] = useState("");
   const [species, updateSpecies] = useState("");
-  const [search, setSearch] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
 
   const { info, results } = useCharacters({
@@ -48,24 +47,12 @@ const Home = () => {
       />
       <div className="cards">
         {results ? (
-          results.map((i) => (
-            <Card
-              key={i.id}
-              id={i.id}
-              image={i.image}
-              name={i.name}
-              status={i.status}
-            />
-          ))
+          results.map((i) => <Card key={i.id} id={i.id} image={i.image} name={i.name} status={i.status} />)
         ) : (
           <p>not found results</p>
         )}
       </div>
-      <Pagination
-        info={info}
-        pageNumber={pageNumber}
-        updatePageNumber={updatePageNumber}
-      />
+      <Pagination info={info} pageNumber={pageNumber} updatePageNumber={updatePageNumber} />
     </div>
   );
 };

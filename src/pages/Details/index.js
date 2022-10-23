@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { useParams } from "react-router-dom";
 import Logo from "../../assets/logo.png";
 import { useDetails } from "../../app/api";
@@ -9,11 +9,7 @@ import { getBadge } from "../../common/components/card/helper";
 const Details = () => {
   let { id } = useParams();
 
-  const { name, location, origin, gender, image, status, species } = useDetails(
-    {
-      id: id,
-    }
-  );
+  const { name, location, origin, gender, image, status } = useDetails({ id: id });
 
   return (
     <div className="homeContainer">
