@@ -47,3 +47,22 @@
   display: flex;
   flex-direction: row;
 }
+
+.input {
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 3px;
+  width: 200px;
+  border-radius: 4px;
+  color: white;
+  border: 2px solid white;
+  background-color: transparent;
+  margin-left: 3rem;
+}
+
+.icon-wrap {
+  margin-top: -1.3rem;
+  margin-left: 13rem;
+}

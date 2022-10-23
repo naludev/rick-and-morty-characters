@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import { getBadge } from "./helper";
 import "./styles.scss";
@@ -8,9 +8,6 @@ import { ROUTES } from "../../../app/routes/paths";
 const Card = ({ id, image, name, status, location }) => {
   const navigate = useNavigate();
 
-  useEffect(() => {
-    console.log(id);
-  });
   return (
     <div className="card" key={id} onClick={() => navigate(ROUTES.DETAIL(id))}>
       <img className="characterImage" src={image} alt="" />
