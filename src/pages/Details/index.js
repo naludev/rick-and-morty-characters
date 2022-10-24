@@ -3,13 +3,21 @@ import { useParams } from "react-router-dom";
 import Logo from "../../assets/logo.png";
 import { useDetails } from "../../app/api";
 import BackgroundParticles from "../Home/particles";
-import "./styles.scss";
 import { getBadge } from "../../common/components/card/helper";
+import "./styles.scss";
 
 const Details = () => {
   let { id } = useParams();
 
   const { name, location, origin, gender, image, status } = useDetails({ id: id });
+
+  const items = [
+    {  id: 1, description: 'name: ', value: name },
+    { id: 2, description: 'gender: ', value: gender },
+    { id: 3, description: 'origin: ', value: origin?.name },
+    { id: 4, description: 'location: ', value: location?.name },
+    { id: 5, description: 'status: ', value: getBadge(status) },
+  ]
 
   return (
     <div className="homeContainer">
@@ -18,25 +26,14 @@ const Details = () => {
       <div style={{ marginTop: "5rem" }}>
         <img src={image} alt="" />
         <div className="detailsContainer">
-          <div className="textContainer">
-            <p className="characterDescription">name:</p><div className="space" /><p className="characterName">{name}</p>
+          {items.map((i) => (
+            <>
+            <div className="textContainer" key={i.id}>
+            <p className="characterDescription">{i.description}</p><div className="space" /><p className="characterName">{i.value}</p>
           </div>
           <br />
-          <div className="textContainer">
-            <p className="characterDescription">gender:</p><div className="space" /><p className="characterName">{gender}</p>
-          </div>
-          <br />
-          <div className="textContainer">
-            <p className="characterDescription">origin:</p><div className="space" /><p className="characterName">{origin?.name}</p>
-          </div>
-          <br />
-          <div className="textContainer">
-            <p className="characterDescription">location:</p><div className="space" /><p className="characterName">{location?.name}</p>
-          </div>
-          <br />
-          <div className="textContainer">
-            <p className="characterDescription">status:</p><div className="space" /><p className="characterName">{getBadge(status)}</p>
-          </div>
+          </>
+          ))}
         </div>
       </div>
     </div>
