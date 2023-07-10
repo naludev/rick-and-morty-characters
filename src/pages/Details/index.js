@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import Logo from "../../assets/logo.png";
+import Logo from "../../assets/logo2.png";
 import { useDetails } from "../../app/api";
 import BackgroundParticles from "../Home/particles";
 import { getBadge } from "../../common/components/card/helper";
