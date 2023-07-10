@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./styles.scss";
-import Logo from "../../assets/logo.png";
+import Logo from "../../assets/logo2.png";
 import { useCharacters } from "../../app/api";
 import Card from "../../common/components/card";
 import BackgroundParticles from "./particles";
