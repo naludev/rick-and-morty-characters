@@ -1,10 +1,10 @@
-import React from "react";
-import { Routes, Route, HashRouter } from "react-router-dom";
-import { routes } from "./routesConfig";
-import Component from "./Component";
+import React from 'react'
+import { Routes, Route, BrowserRouter } from 'react-router-dom'
+import { routes } from './routesConfig'
+import Component from './Component'
 
 export const App = () => (
-  <HashRouter>
+  <BrowserRouter>
     <Routes>
       {routes.map(({ name, path, component }) => (
         <Route
@@ -14,7 +14,7 @@ export const App = () => (
         />
       ))}
     </Routes>
-  </HashRouter>
-);
+  </BrowserRouter>
+)
 
-export default App;
+export default App
